@@ -14,16 +14,16 @@ for filename in os.listdir(os.getcwd()) :
         merger.append(filename)
 
 # function to prompt user to confirm if they want to merge the files
-def user_files() :
-    # prompt user to upload files
-    file_path = input("Please enter the full path to your file: ").strip()
-    if os.path.exists(file_path) and os.path.isfile(file_path) :
-        print("Selected file\(s\): {file_path}")
-        return file_path
-    else : 
-        print(f"Error: The path `{file_path}` does not exist or is not a file. Please try again.")
+# def user_files() :
+#     # prompt user to upload files
+#     file_path = input("Please enter the full path to your file: ").strip()
+#     if os.path.exists(file_path) and os.path.isfile(file_path) :
+#         print("Selected file\(s\): {file_path}")
+#         return file_path
+#     else : 
+#         print(f"Error: The path `{file_path}` does not exist or is not a file. Please try again.")
 
-file_to_merge = user_files()
+# file_to_merge = user_files()
 
 merger.write("merged.pdf")
 merger.close()
